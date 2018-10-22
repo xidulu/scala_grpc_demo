@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, protobuf, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20181019202601"/>
+		date="20181022214249"/>
 	<dependencies>
 		<module organisation="beyondthelines" name="grpcakkastreamruntime_2.12">
 			<revision name="0.0.5" status="release" pubdate="20171212180539" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="55">

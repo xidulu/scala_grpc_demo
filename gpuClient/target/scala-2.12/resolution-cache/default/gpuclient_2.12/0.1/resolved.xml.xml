@@ -4,7 +4,7 @@
 		module="gpuclient_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20181019202601"
+		publication="20181022214249"
 	>
 		<description>
 		gpuClient

@@ -1,9 +1,9 @@
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 protobuf files to /home/xi/Desktop/gpuClient/src/main/resources/specs,/home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main,/home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main,/home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main,/home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 protobuf files to /home/xi/scala_grpc_demo/gpuClient/src/main/resources/specs,/home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main,/home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main,/home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main,/home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main[0m
 [0m[[0m[0mdebug[0m] [0m[0mprotoc options:[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling schema /home/xi/Desktop/gpuClient/src/main/protobuf/GpuNodeServer.proto[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling schema /home/xi/scala_grpc_demo/gpuClient/src/main/protobuf/GpuNode.proto[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling protobuf[0m
-[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/Desktop/gpuClient/src/main/resources/specs[0m
-[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main[0m
-[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main[0m
-[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main[0m
-[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/Desktop/gpuClient/target/scala-2.12/src_managed/main[0m
+[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/scala_grpc_demo/gpuClient/src/main/resources/specs[0m
+[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main[0m
+[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main[0m
+[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main[0m
+[0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/xi/scala_grpc_demo/gpuClient/target/scala-2.12/src_managed/main[0m
