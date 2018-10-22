@@ -1,4 +1,5 @@
 #include "GpuNodeServer.grpc.pb.h"
+#include "sparkcuda.h"
 #include <iostream>
 #include <unordered_map>
 #include <mutex>
@@ -17,11 +18,16 @@ using GpuNodeServer::kernelCallOutput;
 class gpuServerImpl final : public GpuNode::Service
 {
   public:
-    // gpuServerImpl()
+    gpuServerImpl()
+    {
+        kernel = new SparkCUDA();
+    }
+
     ::grpc::Status CreateFile(::grpc::ServerContext *context,
                               const createFileInput *request,
                               createFileOutput *response) override
     {
+        kernel.createFile(request->fpath, request->fsize);
         return grpc::Status::OK;
     }
 
@@ -29,8 +35,16 @@ class gpuServerImpl final : public GpuNode::Service
                               const kernelCallInput *request,
                               kernelCallOutput *response) override
     {
+        std::string out_path;
+        size_t out_size;
+        kernel.callKernel(request->fpath,
+                          request->func, request->param,
+                          &out_path, &out_size);
         return grpc::Status::OK;
     }
+
+  private:
+    SparkCUDA kernel;
 };
 
 int main(int args, char *argv[])
