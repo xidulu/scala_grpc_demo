@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/xi/scala_grpc_demo/gpuClient/src/main/scala/rpcService/GpuNode/client.scala:10:3: identifier expected but 'val' found.[0m
-[0m[[0m[31merror[0m] [0m[0m  val channel = ManagedChannelBuilder.forAddress("0.0.0.0", 5000).usePlaintext(true).build()[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -8,4 +8,3 @@ libraryDependencies ++= Seq(
   "beyondthelines"         %% "grpcmonixgenerator"      % "0.0.5",
   "beyondthelines"         %% "grpcakkastreamgenerator" % "0.0.5"
 )
-
