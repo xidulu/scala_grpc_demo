@@ -1,0 +1,2 @@
+clang++ -std=c++11 -o server -lgrpc++ -lprotobuf -lpthread -lgrpc++_reflection *.cc	
+Makefile:2: recipe for target 'default' failed

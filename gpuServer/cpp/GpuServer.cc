@@ -1,4 +1,4 @@
-#include "GpuNodeServer.grpc.pb.h"
+#include "GpuNode.grpc.pb.h"
 #include "sparkcuda.h"
 #include <iostream>
 #include <unordered_map>
@@ -9,25 +9,22 @@
 #include <grpc++/server_context.h>
 #include <grpc++/security/server_credentials.h>
 
-using GpuNodeServer::createFileInput;
-using GpuNodeServer::createFileOutput;
-using GpuNodeServer::GpuNode;
-using GpuNodeServer::kernelCallInput;
-using GpuNodeServer::kernelCallOutput;
+using rpcService::createFileInput;
+using rpcService::createFileOutput;
+using rpcService::GpuNode;
+using rpcService::kernelCallInput;
+using rpcService::kernelCallOutput;
 
 class gpuServerImpl final : public GpuNode::Service
 {
   public:
-    gpuServerImpl()
-    {
-        kernel = new SparkCUDA();
-    }
-
     ::grpc::Status CreateFile(::grpc::ServerContext *context,
                               const createFileInput *request,
                               createFileOutput *response) override
     {
-        kernel.createFile(request->fpath, request->fsize);
+        response->set_msg(
+            kernel.createFile((request->fpath()).c_str(), request->fsize())
+        );
         return grpc::Status::OK;
     }
 
@@ -37,9 +34,9 @@ class gpuServerImpl final : public GpuNode::Service
     {
         std::string out_path;
         size_t out_size;
-        kernel.callKernel(request->fpath,
-                          request->func, request->param,
-                          &out_path, &out_size);
+        kernel.callKernel(request->fpath().c_str(),request->func().c_str(), request->param(), out_path, out_size);
+        response->set_fpath(out_path);
+        response->set_fsize(out_size);
         return grpc::Status::OK;
     }
 
